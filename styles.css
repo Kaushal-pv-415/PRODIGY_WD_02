@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #000000, #000000);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.stopwatch {
+    color:white;
+    background-color: #000000;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.stopwatch:hover {
+    transform: scale(1.05);
+    background-color: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 300px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+
+#display {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px#03e9f4,
+                0 0 50px#03e9f4,
+                0 0 300px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+button:first-child{
+    filter: hue-rotate(225deg);
+}
+
+button:last-child{
+    filter: hue-rotate(90deg);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#laps {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#laps li {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    background-color: #000000;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+#laps li:nth-child(even) {
+    background-color: #000000;
+}
+
+#laps li span {
+    font-weight: bold;
+    color: #ffffff;
+}
